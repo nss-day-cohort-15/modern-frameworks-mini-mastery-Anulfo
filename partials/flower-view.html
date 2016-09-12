@@ -1,0 +1,14 @@
+<h1>Flower Arrangements</h1>
+<div ng-repeat="arrangement in arrangements | filter: {task: searchText.search}">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="col-xs-6">
+      <h4>{{arrangement.title}}</h4>
+      </div>
+      <div class="col-xs-2">{{arrangement.category}}</div>
+      <div class="col-xs-1">{{arrangement.description}}</div>
+      <div class="col-xs-1">{{arrangement.price}}</div>
+      <!-- <div class="col-xs-1"><a ng-href="#/items/edit/{{item.id}}"><button class="btn btn-danger">Edit</button></a></div> -->
+    </div>
+  </div>
+</div>
