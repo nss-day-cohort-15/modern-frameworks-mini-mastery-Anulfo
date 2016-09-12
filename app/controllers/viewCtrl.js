@@ -1,13 +1,10 @@
 "use strict";
 
-app.controller("viewCtrl", function($scope, ItemStorage, SearchTermData, AuthFactory) {
-    $scope.searchText = SearchTermData;
+app.controller("viewCtrl", function($scope, FlowerStorage) {
     
-    let user = $scope.$parent.getUser();
-    console.log($scope.$parent.getUser);
-    ItemStorage.getFlowerList()
+    FlowerStorage.getFlowerList()
     .then((itemCollectionArr) => {
         console.log("Item Array", itemCollectionArr);
-        $scope.items = itemCollectionArr;
+        $scope.arrangements = itemCollectionArr;
     });
 });
