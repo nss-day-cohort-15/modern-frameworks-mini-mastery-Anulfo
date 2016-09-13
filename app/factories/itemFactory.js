@@ -1,6 +1,6 @@
 "use strict";
 
-app.factory("FlowerStorage", ($q, $http, FirebaseURL, $location) => {
+app.factory("FlowerStorage", ($q, $http, FirebaseURL) => {
     
     let getFlowerList = function(){
         let items = [];

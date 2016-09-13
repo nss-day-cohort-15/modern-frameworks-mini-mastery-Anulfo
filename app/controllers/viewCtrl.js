@@ -8,3 +8,4 @@ app.controller("viewCtrl", function($scope, FlowerStorage) {
         $scope.arrangements = itemCollectionArr;
     });
 });
+

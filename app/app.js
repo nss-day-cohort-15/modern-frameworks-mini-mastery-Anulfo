@@ -1,6 +1,6 @@
 "use strict";
 
-var app = angular.module("FlowerStore", ["ngRoute"])
+var app = angular.module("FlowerStore", ["ngRoute", "angular.filter"])
 .constant("FirebaseURL", "https://flower-power-angular.firebaseio.com");
 
 app.config(function($routeProvider){

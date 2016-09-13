@@ -1,14 +1,18 @@
 <h1>Flower Arrangements</h1>
   
-  <div class="row" ng-repeat="arrangement in arrangements">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <div class="col-xs-4">
-        <h4>{{arrangement.title}}</h4>
-        </div>
-        <div class="col-xs-2"> {{arrangement.category}}</div>
-        <div class="col-xs-6">{{arrangement.description}}</div>
-        <div class="col-xs-1">Price: {{arrangement.price}}</div>
-      </div>
-    </div>
-  </div>
+<ul ng-repeat="(key, value) in arrangements | groupBy: 'category'">
+    <h2>Flower Category: {{key}}</h2>
+    <br>
+    <li ng-repeat="arrangement in value">
+      Title:{{arrangement.title}}
+      <br>
+      <br>
+      Description:{{arrangement.description}}
+      <br>
+      <br>
+      Price:{{arrangement.price}}
+      <br>
+      <br>
+    </li>
+  </ul>
+
